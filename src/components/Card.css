@@ -33,11 +33,8 @@
   font-weight: 600;
 }
 
-.description {
-  font-size: 0.95rem;
-  color: #586069;
-  margin-bottom: 1rem;
-  flex-grow: 1; /* Push the button to the bottom */
+.card-spacer {
+  flex-grow: 1; /* This property pushes the buttons to the bottom */
 }
 
 .view-button {
@@ -95,11 +92,10 @@
   flex: 1; /* This makes both items share the space equally */
 }
 
-/* Style for the new edit button */
-.edit-button-card {
-  background-color: #45b44b; /* A neutral gray color */
+.details-button {
+  background-color: #8cd46a;
   color: white;
-  width: 100%; /* Make the button fill the link that wraps it */
+  width: 100%;
   border: none;
   padding: 0.75rem 1.25rem;
   border-radius: 6px;
@@ -109,6 +105,6 @@
   transition: background-color 0.2s ease-in-out;
 }
 
-.edit-button-card:hover {
+.details-button:hover {
   background-color: #586069;
 }

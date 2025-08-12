@@ -23,12 +23,11 @@ const Card = (props) => {
       {/* Name is no longer a link */}
       <h2 className="name">{props.name}</h2>
 
-      <p className="description">{props.description}</p>
+      <div className="card-spacer"></div>
 
       <div className="card-buttons">
-        {/* Edit button is now first */}
-        <Link className="edit-link" to={"/view/" + props.id}>
-          <button className="edit-button-card">✏️ Edit</button>
+        <Link className="details-link" to={"/view/" + props.id}>
+          <button className="details-button">View Details</button>
         </Link>
 
         {/* Visit Channel button is now second */}

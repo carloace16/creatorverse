@@ -30,26 +30,32 @@ const ViewCreator = () => {
 
   return (
     <div className="ViewCreator">
-      {creator.imageURL && (
-        <img
-          className="creator-image"
-          src={creator.imageURL}
-          alt={creator.name}
-        />
-      )}
-      <h1>{creator.name}</h1>
-      <p>{creator.description}</p>
-      <a
-        href={creator.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="channel-link"
-      >
-        Visit Channel
-      </a>
-      <Link to={`/edit/${id}`}>
-        <button className="edit-button">Edit Creator</button>
-      </Link>
+      <div className="creator-image-container">
+        {creator.imageURL && (
+          <img
+            className="creator-image"
+            src={creator.imageURL}
+            alt={creator.name}
+          />
+        )}
+      </div>
+      <div className="creator-info">
+        <h1>{creator.name}</h1>
+        <p>{creator.description}</p>
+        <div className="creator-actions">
+          <a
+            href={creator.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="channel-link"
+          >
+            Visit Channel
+          </a>
+          <Link to={`/edit/${id}`}>
+            <button className="edit-button">Edit Creator</button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

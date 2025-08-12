@@ -1,10 +1,10 @@
 # WEB103 Prework - Creatorverse
 
-Submitted by: **👉🏿 your name here**
+Submitted by: **👉🏿 Carlo Ace Sagad**
 
-About this web app: **👉🏿 A brief one-sentence description of the app, e.g., "A web application that allows users to curate a list of their favorite content creators with full CRUD functionality."**
+About this web app: **👉🏿 "A web application that allows users to curate a list of their favorite content creators with full CRUD functionality."**
 
-Time spent: **👉🏿 X** hours
+Time spent: **👉🏿 10** hours
 
 ## Required Features
 
@@ -30,13 +30,21 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-👉🏿<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+👉🏿<img src='https://github.com/carloace16/creatorverse/blob/main/creatorverse_V1.gif?raw=true' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with ... 👉🏿 ScreenToGif (for Windows)
+GIF created with ... 👉🏿 Kapwing.com (for Windows)
 
 ## Notes
 
-Describe any challenges encountered while building the app or any additional context you'd like to add.
+A few challenges were encountered while building this application, which provided valuable debugging experience:
+
+- **Environment Configuration:** The project initially failed to start due to a `TypeError: crypto.hash is not a function`. This was a challenging environment issue caused by an outdated version of Node.js. It was resolved by using a node version manager (`nvm`) to upgrade Node.js to a compatible version and then reinstalling the project's dependencies.
+
+- **Complex CSS Layout Debugging:** A significant challenge was properly centering the main application layout. This required using the browser's developer tools to inspect the DOM and discover that the default Vite/Pico.css styles on the `<body>` and `#root` elements were interfering with our own layout styles. The solution involved removing the conflicting `display: flex` property from the `body` and ensuring the `#root` container was set to `100%` width.
+
+- **Nested Interactive Elements:** The "Visit Channel" button on the creator cards initially conflicted with the link that navigated to the creator's detail page. This was resolved by refactoring the `Card` component to separate the two actions, making the creator's name the link to the detail page and the "Visit Channel" a distinct button. This followed a best practice for user interface design to avoid conflicting actions.
+
+- **Database Schema Mismatch:** An error occurred when adding a new creator, which I diagnosed using the browser console. The error message `Could not find the 'description' column` revealed a mismatch between the frontend code and the Supabase database schema. The issue was fixed by correcting the column name in the Supabase table editor.
 
 ## License
 

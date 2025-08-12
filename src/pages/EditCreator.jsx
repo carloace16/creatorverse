@@ -121,15 +121,17 @@ const EditCreator = () => {
         <br />
         <br />
         <div className="form-buttons">
-          <button type="submit" onClick={updateCreator}>
-            Update Creator
-          </button>
+          {/* Delete button is now first, so it will be on the left */}
           <button
             className="deleteButton"
             type="button"
             onClick={deleteCreator}
           >
             Delete Creator
+          </button>
+          {/* Update button is now second, so it will be on the right */}
+          <button type="submit" onClick={updateCreator}>
+            Update Creator
           </button>
         </div>
       </form>
