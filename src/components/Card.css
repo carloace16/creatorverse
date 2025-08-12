@@ -1,0 +1,114 @@
+.Card {
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem;
+  width: 320px;
+  background-color: #fff; /* White cards stand out on the light background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* A subtle shadow for depth */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Make items within the card stretch */
+  text-align: left; /* Align text to the left for better readability */
+  transition: transform 0.2s ease-in-out; /* Add a subtle hover effect */
+}
+
+.Card:hover {
+  transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.name {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #24292e; /* Darker, more prominent name */
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #586069;
+  margin-bottom: 1rem;
+  flex-grow: 1; /* Push the button to the bottom */
+}
+
+.view-button {
+  background-color: #007bff; /* A primary blue for action buttons */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  transition: background-color 0.2s ease-in-out;
+  font-size: 0.9rem;
+  text-align: center; /* Center the text in the button */
+}
+
+.view-button:hover {
+  background-color: #0056b3;
+}
+
+/* Optional: Style the link within the card to remove the underline */
+.Card a {
+  text-decoration: none;
+}
+.Card a:hover {
+  text-decoration: none; /* Keep no underline on hover within the card */
+}
+
+.edit-icon {
+  font-size: 0.8em;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+/* Make the icon more visible on hover */
+.Card .name:hover .edit-icon {
+  opacity: 1;
+}
+
+/* Find this rule in Card.css */
+.card-buttons {
+  display: flex;
+  flex-direction: column; /* This is the key change */
+  gap: 10px;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Target the link and button to take up equal space */
+.card-buttons .view-button,
+.card-buttons .edit-link {
+  flex: 1; /* This makes both items share the space equally */
+}
+
+/* Style for the new edit button */
+.edit-button-card {
+  background-color: #45b44b; /* A neutral gray color */
+  color: white;
+  width: 100%; /* Make the button fill the link that wraps it */
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.edit-button-card:hover {
+  background-color: #586069;
+}

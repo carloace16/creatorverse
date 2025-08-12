@@ -1,0 +1,72 @@
+form {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #484f58;
+  font-size: 1.1rem;
+}
+
+/* This is the main fix for the input fields */
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5da;
+  background-color: #f6f8fa; /* Light background for the input */
+  color: #24292e; /* Dark text for readability */
+  font-size: 1rem;
+  box-sizing: border-box; /* Prevents padding from breaking layout */
+}
+
+form input[type="submit"],
+form .deleteButton,
+.deleteButton {
+  /* Added .deleteButton here for consistency */
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+form input[type="submit"]:hover,
+form .deleteButton:hover,
+.deleteButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="submit"] {
+  background-color: #2ea44f; /* A nice GitHub green for submit */
+  color: white;
+}
+
+.deleteButton {
+  background-color: #cb2431; /* A consistent red for delete */
+  color: white;
+  margin-left: 1rem;
+}
+
+/* New styles for the button container on forms */
+.form-buttons {
+  display: flex;
+  gap: 1rem; /* This creates space between the buttons */
+}
+
+/* This targets both buttons inside the container */
+.form-buttons button {
+  flex: 1; /* This is the key: it makes both buttons take up equal space */
+}

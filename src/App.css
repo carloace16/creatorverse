@@ -1,0 +1,42 @@
+.header {
+  background-color: #007bff; /* Consistent primary blue */
+  color: white;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700; /* Make the title bolder */
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600; /* Bolder navigation links */
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #add8e6; /* A lighter blue on hover */
+}
+
+main {
+  padding: 2rem;
+  max-width: 1200px; /* Limit the width of the content area */
+  margin: 0 auto; /* Center the main content */
+}
+
+/* Apply grid layout here for consistency */
+.ShowCreators {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem; /* Slightly larger gap */
+  justify-content: center;
+}
